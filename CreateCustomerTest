@@ -1,0 +1,35 @@
+public class CustomerTest {
+	@BeforeClass()
+	public void configBC()
+	{
+		System.out.println("======Launch a browser========");
+	}
+	@BeforeMethod()
+	public void configBefore()
+	{
+		System.out.println("Login");
+	}
+	@Test
+	public void CreateCustomerTest()
+	{
+		System.out.println("Created customer successfully..");
+		String str="aaa";
+		System.out.println(str.equals("AAA"));
+	}
+	@Test
+	public void ModifyCustomerTest()
+	{
+		System.out.println("Customer is modified sucessfully...");
+	}
+	@AfterMethod()
+	public void ConfigAfter()
+	{
+		System.out.println("Logout");
+	}
+	@AfterClass()
+	public void configAC()
+	{
+		System.out.println("Close the browser");
+	}
+
+}
